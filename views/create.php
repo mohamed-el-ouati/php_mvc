@@ -3,7 +3,7 @@ $title = 'Ajouter Robots';
 
 ob_start();
 ?>
-<form action="store.php" method="post">
+<form action="index.php?action=store" method="post">
     <div class="form-group">
         <label> Name </label>
         <input type="text" class="form-control" name="name">

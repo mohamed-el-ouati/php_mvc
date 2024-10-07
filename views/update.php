@@ -5,7 +5,7 @@ ob_start();
 //var_dump($robot);
 ?>
 <p>Mis à jour de  robot </p>
-<form action="updatefin.php" method="post">
+<form action="index.php?action=updatefin" method="post">
     <div class="form-group">
     <label> ID  </label>
     <input type="text" class="form-control" name="id" value="<?php echo $robot->id ?>">

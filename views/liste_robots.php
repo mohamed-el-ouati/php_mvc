@@ -3,7 +3,7 @@ $title = 'Liste des Robots';
 
 ob_start();
 ?>
-<a href='create.php' class= 'btn btn-primary'>Ajouter </a>
+<a href='index.php?action=create' class= 'btn btn-primary'>Ajouter </a>
 <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
@@ -20,8 +20,8 @@ ob_start();
                 <td><?= htmlspecialchars($robot->name) ?></td>
                 <td><?= htmlspecialchars($robot->description) ?></td>
                 <td>
-                    <a href="update.php?id=<?php echo $robot->id?>" class="btn btn-success btn-sm">Modifier</a>
-                    <a href="delete.php?id=<?php echo $robot->id?>" class="btn btn-danger btn-sm">Supprimer Robot</a>
+                    <a href="index.php?action=update&id=<?php echo $robot->id?>" class="btn btn-success btn-sm">Modifier</a>
+                    <a href="index.php?action=delete&id=<?php echo $robot->id?>" class="btn btn-danger btn-sm">Supprimer Robot</a>
                 </td>
             </tr>
         <?php endforeach; ?>

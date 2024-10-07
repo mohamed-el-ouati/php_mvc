@@ -14,7 +14,7 @@ function storeAction(){
     //var_dump($_POST);
     $isCreated = create();
     if ($isCreated) {
-        header('Location: index.php');
+        header('Location: index.php?action=liste');
     } else {
         echo "Erreur lors de l'ajout du robot.";
     }
@@ -38,7 +38,7 @@ function updatefinAction(){
     $isUpdated = update($name, $description, $id);
     
     if ($isUpdated) {
-        header('Location: index.php');
+        header('Location: index.php?action=liste');
     } else {
         echo "Erreur lors de la mise à jour du robot.";
     }
@@ -49,7 +49,7 @@ function updatefinAction(){
 function distroyAction(){
     $id = $_GET['id'];
     delete($id);
-    header('Location: index.php');
+    header('Location: index.php?action=liste');
 }
 
 function deleteAction(){
